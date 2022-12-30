@@ -1,0 +1,13 @@
+{{#each category}}
+    <div class="card">
+        <div class="card-body">
+            <a href="/categories/{{slug}}"><h2>{{name}}</h3></a>
+            <small>Slug: {{slug}}</small>
+            <br>
+            data de criação: {{#formatDate date}}{{/formatDate}}
+            <br>
+        </div>
+    </div>
+{{else}}
+    <h4>Não há categorias registradas</h4>
+{{/each}}

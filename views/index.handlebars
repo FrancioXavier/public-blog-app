@@ -1,0 +1,28 @@
+<div class="jumbotron text-bg-secondary p-3">
+  <h1 class="display-4">Bem vindo ao Blog do Node</h1>
+  <p class="lead">Blog simples criado com Express.js, MongoDB e Node.js</p>
+  <hr class="my-4">
+    <a class="btn btn-primary btn-lg" href="#" role="button">Crie uma conta</a>
+  </p>
+</div>
+
+<hr>
+
+<h2>Postagens recentes:</h2>
+
+{{#each post}}
+    <div class="card">
+        <div class="card-body">
+            <h4>{{title}}</h4>
+            <p>{{description}}</p>
+            <a href="/posts/{{slug}}"><button class="btn btn-success">Leia mais</button></a>
+            <hr>
+            <small>Criado em: {{#formatDate date}}{{/formatDate}}</small>
+            <br>
+            <small>categoria: {{category.name}}</small>
+            <br>
+        </div>
+    </div>
+{{else}}
+
+{{/each}}
